@@ -84,3 +84,96 @@ public class LC_242_Valid_Anagram {
     }
 }
 
+/*
+==================== 🧠 PROBLEM STATEMENT ====================
+
+Given two strings s and t, return true if t is an anagram of s, otherwise return false.
+
+👉 Anagram = same characters with same frequency
+
+==============================================================
+
+
+==================== 📥 INPUT ====================
+
+s = "anagram"
+t = "nagaram"
+
+================================================
+
+
+==================== 📤 OUTPUT ====================
+
+true
+
+=================================================
+
+
+==================== 🚀 APPROACH (ARRAY - BEST) ====================
+
+Step 1: Check length
+→ if lengths not equal → return false
+
+Step 2: Create count array of size 26
+→ to store frequency of characters
+
+Step 3: Traverse both strings in one loop
+→ s → increment (+1)
+→ t → decrement (-1)
+
+Step 4: Traverse count array
+→ if any value != 0 → return false
+
+Step 5: If all values are 0 → return true
+
+=================================================
+
+
+==================== 🔍 DRY RUN ====================
+
+s = "ab"
+t = "ba"
+
+count = [0...0]
+
+i=0:
+'a' → +1 → count[0] = 1
+'b' → -1 → count[1] = -1
+
+i=1:
+'b' → +1 → count[1] = 0
+'a' → -1 → count[0] = 0
+
+Final:
+count = [0,0,0,...]
+
+✔️ All zero → anagram ✅
+
+=================================================
+
+
+==================== ⏱ COMPLEXITY ====================
+
+Step 1: Length check → O(1)
+
+Step 2: Loop through string → O(n)
+
+Step 3: Check count array (size 26) → O(1)
+
+👉 Total Time Complexity = O(n)
+
+👉 Space Complexity = O(1)
+(only 26 size array → constant space)
+
+=================================================
+
+
+==================== ⚡ KEY IDEA ====================
+
+s → +1  
+t → -1  
+
+👉 Perfect cancel → anagram
+
+=================================================
+*/
