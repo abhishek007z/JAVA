@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-public class LC_242_Valid_Anagram {
+public class LC_03_242_Valid_Anagram {
 
     public static void main(String[] args) {
 
